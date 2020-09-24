@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <title>Time Sheet</title>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  
+  <body>
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Add new data</span>
+        
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Menu</span>
+      <nav class="mdl-navigation">
+       <a class="mdl-navigation__link" href="main.html">Report</a>
+        <a class="mdl-navigation__link" href="logout.html" id="sign-out">Logout</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+      <div class="page-content" style="padding-top: 60px;" align="center">
+      <!-- Your content goes here -->
+      <h4>Add Data</h4>
+
+      <form>
+        <div class="form-group">
+          <label for="project">Project</label>
+          <select class="form-control" id="project">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="start_date">from</label>
+          <input type="datetime" class="form-control" id="start_date">
+        </div>
+        <div class="form-group">
+          <label for="end_date">to</label>
+          <input type="datetime" class="form-control" id="end_date">
+        </div>
+
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+      <form>
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Segments</th>
+            <th><div class="material-icons mdl-badge mdl-badge--overlap" data-badge="♥">account_box</div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Start Date</td>
+            <td>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="datetime" id="start_date">
+                <label class="mdl-textfield__label" for="title">Start Date</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">End Date</td>
+            <td>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="datetime" id="end_date">
+                <label class="mdl-textfield__label" for="title">End Date</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Description</td>
+            <td>
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="title" id="title">
+                <label class="mdl-textfield__label" for="title">Title...</label>
+              </div>
+            </td>
+          </tr>
+
+
+
+
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Content</td>
+            <td>
+              <div class="mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows= "5" id="content" ></textarea>
+                <label class="mdl-textfield__label" for="content">Content...</label>
+              </div>
+  
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">
+              <button id="add-data" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+                Submit
+              </button>
+            </td>
+            <td>
+            </td>
+          </tr>
+        
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">
+                Console:
+            </td>
+            <td>
+              <div class="panel panel-danger" id ="errors" style='display: none;'>       
+              </div>
+              <div class="panel panel-primary" id ="success" style='display: none;'>
+              </div>
+              <div class="col-xs-2"></div>
+              <div class="row"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </form>
+ <!--Insert JS-->     
+      </div>
+    </main>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!--Configure firebase-->
+    <script>
+    
+    var config = {
+        apiKey: "AIzaSyB9YGFLG1eaR0aHAOQFpW3T2TqK5N8sAHA",
+        authDomain: "myacty-287e4.firebaseapp.com",
+        databaseURL: "https://myacty-287e4.firebaseio.com",
+        projectId: "myacty-287e4",
+        storageBucket: "myacty-287e4.appspot.com",
+        messagingSenderId: "722469041569",
+        appId: "1:722469041569:web:3d35d1361864333e4487e0"
+    };
+  
+    var thumbnail;
+
+    firebase.initializeApp(config);
+    var database = firebase.database();
+
+    document.getElementById("add-data").onclick = function(e) {
+      
+      var title = document.getElementById('title').value;
+      var content = document.getElementById('content').value;
+      var rootRef = firebase.database().ref();
+      var storesRef = rootRef.child('app/data/');
+      var newStoreRef = storesRef.push();
+             newStoreRef.set({
+             title: title,
+             content: content
+         });
+      alert("Success");
+    }  
+    </script>
+</body>
+</html>
